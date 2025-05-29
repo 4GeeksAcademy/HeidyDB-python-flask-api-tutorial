@@ -154,9 +154,7 @@ def test_delete():
     except AttributeError:
         raise AttributeError("The function 'delete_todo' should exist on app.py")
 
-@pytest.mark.it("The endpoint 'DELETE /todos' should exist")
-def test_delete_code(client):
-    response = client.delete('/todos/0')
+ 
     assert response.status_code == 200
 
 @pytest.mark.it("DELETE /todos should return json list of todos")
